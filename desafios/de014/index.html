@@ -9,48 +9,64 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        table {
-            height: 400px;
-            width: 500px;
+        table { 
             border-collapse: collapse;
+            margin: 20px;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
         }
 
         thead {
             background-color: gray;
+            color: white;
         }
 
         th.cor {
             background-color: gray;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            
         }
 
-        td.gray {
+        td.valor {
             background-color: grey;
+            color: white;
         }
 
         th, td {
             border: 2px solid black;
-            padding: 10px;
+            padding: 15px 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <table>
+        <caption>
+            Médias de Notas
+        </caption>
         <thead>
             <tr>
-                <th rowspan="2">Àrea</th>
-                <th rowspan="2">Diciplina</th>
-                <th colspan="2">Notas</th>
-                <th rowspan="2">Media</th>
+                <th rowspan="2" scope="col" >Àrea</th>
+                <th rowspan="2" scope="col">Diciplina</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Media</th>
             </tr>
             <tr>
-                <th>Nota 1</th>
-                <th>Noita 2</th>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
             </tr>
             
         </thead>
         <tbody>
+            
             <tr>
-                <th rowspan="5">Exatas</th> 
+                <th rowspan="5" scope="rowgroup">Exatas</th> 
             </tr>
             
             <tr>
@@ -80,14 +96,12 @@
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
-        <tbody>
                 <tr>
-                <th colspan="4" class="cor">Medida de Exatas</th>
-                <td class="gray">0.0</td>
+                <th colspan="4" class="cor" scope="row">Medida de Exatas</th>
+                <td class="valor">0.0</td>
                 </tr>
-        </tbody>
             <tr>
-                <th rowspan="3">Humanas</th>
+                <th rowspan="3" scope="rowgroup">Humanas</th>
             </tr>
 
             <tr>
@@ -103,12 +117,11 @@
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
-        <tbody>
+        
             <tr>
-                <th colspan="4" class="cor">Medias de Humanas</th>
-                <td class="gray">0.0</td>
+                <th colspan="4" class="cor" scope="rowgroup">Medias de Humanas</th>
+                <td class="valor">0.0</td>
             </tr>
-        </tbody>
         </tbody>
     </table>
 </body>
