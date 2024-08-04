@@ -10,11 +10,26 @@
         }
 
         table {
+            height: 400px;
+            width: 500px;
             border-collapse: collapse;
+        }
+
+        thead {
+            background-color: gray;
+        }
+
+        th.cor {
+            background-color: gray;
+        }
+
+        td.gray {
+            background-color: grey;
         }
 
         th, td {
             border: 2px solid black;
+            padding: 10px;
         }
     </style>
 </head>
@@ -22,12 +37,16 @@
     <table>
         <thead>
             <tr>
-                <th>Àrea</th>
-                <th>Diciplina</th>
+                <th rowspan="2">Àrea</th>
+                <th rowspan="2">Diciplina</th>
                 <th colspan="2">Notas</th>
-                <th ></th>
-                <th >Média</th>
+                <th rowspan="2">Media</th>
             </tr>
+            <tr>
+                <th>Nota 1</th>
+                <th>Noita 2</th>
+            </tr>
+            
         </thead>
         <tbody>
             <tr>
@@ -63,8 +82,8 @@
             </tr>
         <tbody>
                 <tr>
-                <th colspan="4">Medida de Exatas</th>
-                <td>0.0</td>
+                <th colspan="4" class="cor">Medida de Exatas</th>
+                <td class="gray">0.0</td>
                 </tr>
         </tbody>
             <tr>
@@ -86,8 +105,8 @@
             </tr>
         <tbody>
             <tr>
-                <th colspan="4">Medias de Humanas</th>
-                <td>0.0</td>
+                <th colspan="4" class="cor">Medias de Humanas</th>
+                <td class="gray">0.0</td>
             </tr>
         </tbody>
         </tbody>
